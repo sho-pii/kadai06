@@ -1,6 +1,6 @@
 import React from 'react';
 import Page1 from './pages/Page1';
-import Page1 from './pages/Page2';
+import Page2 from './pages/Page2';
 
 function App() {
   return (
