@@ -1,9 +1,11 @@
-
+import React from 'react';
+import Page1 from '../pages/Page1';
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hello</h1>
+    <div>
+      <Page1 />
+
     </div>
   );
 }
