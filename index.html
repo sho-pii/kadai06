@@ -5,19 +5,60 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>kadai06</title>
+  <title>音声入力ふせんメモ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <div class="top">TOP</div>
+  <header>
+    <div class="title1">
+      <h1>音声入力ふせんメモ</h1>
 
+      <div class="switch">
+        <input type="radio" name="s2" id="week" value="1" checked="">
+        <label for="week" class="s-week">week</label>
+        <input type="radio" name="s2" id="month" value="0">
+        <label for="month" class="s-month">month</label>
+      </div>
+    </div>
 
+    <div class="ctl">
+      <div id="result-div">録音した文字が入ります</div>
+      <button id="start-btn">録音</button>
+      <button id="stop-btn">停止</button>
+      <button id="add-btn">追加</button>
+      <button id="clear-btn">全削除</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="background" class="b-week">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </main>
+
+  
   <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <!-- <script src="https://labs.goo.ne.jp/api/chrono"></script> -->
   <script type="module" src="js/add.js"></script>
-  <script type="module" src="js/env.js"></script>
-  <script type="module" src="js/index.js"></script>
-  <!-- JS. -->
+  
+  <!-- /JS -->
 </body>
 
 </html>

@@ -1,0 +1,246 @@
+body {
+  font-family: 'Kiwi Maru', serif;
+}
+
+/*------------------------ヘッダー-----------------------*/
+header {
+  display: block;
+  justify-content: space-between;
+  height: 250px;
+}
+
+.title1 {
+  display: flex;
+  padding-left: 20px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+.switch {
+  margin: auto 0 auto 20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch label {
+  display: block;
+  float: left;
+  cursor: pointer;
+  width: 60px;
+  margin: 0;
+  padding: 10px;
+  background: #bdc3c7;
+  color: #869198;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1;
+  transition: .2s;
+}
+
+.switch label:first-of-type {
+  border-radius: 3px 0 0 3px;
+}
+
+.switch label:last-of-type {
+  border-radius: 0 3px 3px 0;
+}
+
+.switch input[type="radio"]:checked+.s-week {
+  background-color: #a1b91d;
+  color: #fff;
+}
+
+.switch input[type="radio"]:checked+.s-month {
+  background-color: #e67168;
+  color: #fff;
+}
+
+/*------------------------背景-----------------------*/
+main {
+  height: 510px;
+  position: relative;
+  margin: -10px;
+}
+
+#back {
+  visibility: hidden;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+}
+
+.b-week {
+  background: linear-gradient(90deg,
+      pink 0%, pink 14.3%,
+      orange 14.3%, orange 28.6%,
+      rgb(255, 233, 108) 28.6%, rgb(255, 233, 108) 42.9%,
+      lightgreen 42.9%, lightgreen 57.2%,
+      skyblue 57.2%, skyblue 71.5%,
+      royalblue 71.5%, royalblue 85.8%,
+      mediumpurple 85.8%, mediumpurple 100%);
+}
+
+/*------------------------month背景-----------------------*/
+
+.b-month {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.box:nth-child(1) {
+  background-color: tomato;
+}
+
+.box:nth-child(2) {
+  background-color: royalblue;
+}
+
+.box:nth-child(3) {
+  background-color: pink;
+}
+
+.box:nth-child(4) {
+  background-color: lightgreen;
+}
+
+.box:nth-child(5) {
+  background-color: lightseagreen;
+}
+
+.box:nth-child(6) {
+  background-color: mediumorchid;
+}
+
+.box:nth-child(7) {
+  background-color: lightskyblue;
+}
+
+.box:nth-child(8) {
+  background-color: orange;
+}
+
+.box:nth-child(9) {
+  background-color: forestgreen;
+}
+
+.box:nth-child(10) {
+  background-color: darkgoldenrod;
+}
+
+.box:nth-child(11) {
+  background-color: sienna;
+}
+
+.box:nth-child(12) {
+  background-color: slateblue;
+}
+
+
+/*------------------------ふせん-----------------------*/
+.note {
+  background-color: yellow;
+  padding: 10px;
+  width: 170px;
+  height: 170px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+  text-align: center;
+  position: absolute;
+}
+
+textarea {
+  background-color: transparent;
+  border: none;
+}
+
+.note>textarea[type="text"] {
+  width: 160px;
+  height: 140px;
+  z-index: 50;
+}
+
+.batsu {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.batsu:hover::before,
+.batsu:hover::after {
+  background: #85813f;
+}
+
+.batsu::before,
+.batsu::after {
+  /* 共通設定 */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  /* 棒の幅（太さ） */
+  height: 20px;
+  /* 棒の高さ */
+  background: yellow;
+  border-radius: 2.5px;
+  /* 棒の四隅の丸み*/
+}
+
+.batsu::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.batsu::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*------------------------録音-----------------------*/
+.ctl {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+button {
+  width: 100px;
+  height: 60px;
+  margin: auto 0 auto 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 20px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+#start-btn {
+  color: red;
+}
+
+#add-btn {
+  color: green;
+}
+
+#clear-btn {
+  color: blue;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+#result-div {
+  border: 2px solid #869198;
+  width: 500px;
+  height: 90px;
+  margin-left: 10px;
+  padding: 10px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
