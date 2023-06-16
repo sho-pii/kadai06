@@ -26,8 +26,6 @@ function getNewNote() {
     ;
 }
 
-// console.log(firebaseConfig);
-
 // 録音
 const startBtn = document.querySelector('#start-btn');
 const stopBtn = document.querySelector('#stop-btn');
@@ -65,6 +63,12 @@ $("#start-btn").on("click", function () {
 $("#stop-btn").on("click", function () {
   recognition.stop();
 });
+
+// result-divの中を消去
+$('#clear-btn').on('click', function () {
+  $('#result-div').text('');
+});
+
 
 
 // 追加ボタン
@@ -144,11 +148,12 @@ $('#add-btn').on('click', function () {
   });
 });
 
+
+//　ふせんの表示
 var docId;
 
 $(document).ready(function() {
   const colId = "ふせん";
-
   const collectionRef = collection(db, colId);
   
   getDocs(collectionRef)
