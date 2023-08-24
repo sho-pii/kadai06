@@ -26,6 +26,8 @@ function getNewNote() {
     ;
 }
 
+// console.log(firebaseConfig);
+
 // 録音
 const startBtn = document.querySelector('#start-btn');
 const stopBtn = document.querySelector('#stop-btn');
@@ -63,12 +65,6 @@ $("#start-btn").on("click", function () {
 $("#stop-btn").on("click", function () {
   recognition.stop();
 });
-
-// result-divの中を消去
-$('#clear-btn').on('click', function () {
-  $('#result-div').text('');
-});
-
 
 
 // 追加ボタン
@@ -148,12 +144,11 @@ $('#add-btn').on('click', function () {
   });
 });
 
-
-//　ふせんの表示
 var docId;
 
 $(document).ready(function() {
   const colId = "ふせん";
+
   const collectionRef = collection(db, colId);
   
   getDocs(collectionRef)
@@ -213,3 +208,42 @@ $(document).ready(function() {
       console.error("ノートの取得に失敗しました", error);
     });
 });
+
+
+// // goo時刻解析
+// var apiURL = 'https://labs.goo.ne.jp/api/chrono';  // リクエスト先のURL
+// var apiKey = '148e080dc7870e3c89192f8f9f18127954d3c4b506da91b5e3c7deb80c4d3e4e';  // APIキーまたはアプリケーションID
+
+// $.ajax({
+//   url: apiURL,
+//   method: 'GET',
+//   data: {
+//     "sentence": $("#resultDev").val()
+//   },
+//   headers: {
+//     'X-Application-ID': apiKey,  // APIキーをAuthorizationヘッダーに追加する場合
+//     'Content-Type': 'application/json'
+//   },
+//   success: function(response) {
+//     // 成功時の処理
+//     console.log(response);
+//   },
+//   error: function(xhr, status, error) {
+//     // エラー時の処理
+//     console.error(status + ': ' + error);
+//   }
+// });
+// var url = "";
+// var data = {
+//     "app_id": "{148e080dc7870e3c89192f8f9f18127954d3c4b506da91b5e3c7deb80c4d3e4e}",
+//     "sentence": "{$(resultDev)}"
+// };
+
+// $.ajax({
+//     url: url,
+//     type: "POST",
+//     data: data,
+//     success: function(response) {
+//         console.log(response);
+//     }
+// });
